@@ -1,0 +1,114 @@
+:root {
+  --text-color: #343a40;
+  --text-accent-color: #00b35a;
+  --text-error-color: #d9534f;
+  --bg-color: #eefcf5;
+  --border-color: #ced4da;
+  --table-header-bg-color: #e3f2e2;
+  --button-bg-color: #00FF80;
+  --button-border-color: #2dbb58;
+  --button-hover-border-color: #1b6b33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 14px/1.6 monospace;
+  color: var(--text-color);
+  padding: 0 50px;
+  background: var(--bg-color);
+}
+
+form p {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  border-radius: 6px;
+}
+
+form tr {
+  width: fit-content;
+  position: relative;
+  border-radius: 6px;
+}
+
+form p label,
+form .label {
+  font-size: 13px;
+  padding: 0 4px;
+}
+
+form p input, form tr input {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 5px;
+  background: white;
+  font-family: monospace;
+  color: var(--text-color);
+}
+
+form p input:hover, form tr input:hover {
+  border: 1px solid var(--button-border-color);
+}
+
+form p input:focus, form tr input:focus {
+  border: 1px solid var(--button-border-color);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: padding-box;
+  background-color: white !important;
+  color: var(--text-color) !important;
+}
+
+table {
+  margin-top: 16px;
+  border-spacing: 5px;
+  width: 100%;
+  border-collapse: separate;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px 12px;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  background: white;
+}
+
+th {
+  font-weight: bold;
+  background: var(--table-header-bg-color);
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  padding: 8px 12px;
+  border: 1px solid var(--button-border-color);
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 1px solid var(--button-hover-border-color);
+}

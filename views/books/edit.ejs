@@ -1,0 +1,17 @@
+<%- include ../layouts/header.ejs %>
+
+<div>
+    <form method="POST" action="/books/edit/<%=data[0].id %>">
+        <p><label>Tytuł</label> <input type="text" name="title" required value="<%=data[0].title %>"></p>
+        <p><label>Imię autora</label> <input type="text" name="author_name" required value="<%=data[0].author_name %>"></p>
+        <p><label>Nazwisko autora</label> <input type="text" name="author_lastname" required value="<%=data[0].author_lastname %>"></p>
+        <p><label>Rok publikacji</label> <input type="number" name="publish_year" min="1000" max="<%= new Date().getFullYear() %>" step="1" required value="<%=data[0].first_publish_year %>"></p>
+        <p><label>Opis</label> <input type="text" name="about" required value="<%=data[0].about %>"></p>
+        <p>
+            <input type="button" onclick="cancelEdit('/books')" value="Anuluj">
+            <input class="button" type="submit" value="Zapisz">
+        </p>
+    </form>
+</div>
+
+<%- include ../layouts/footer.ejs %>

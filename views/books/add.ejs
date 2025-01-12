@@ -1,0 +1,16 @@
+<%- include ../layouts/header.ejs %>
+
+<div>
+    <p><%= message %></p>
+
+    <form method="POST">
+        <p><label>Tytuł</label> <input type="text" name="title"></p>
+        <p><label>Imię autora</label> <input type="text" name="author_name"></p>
+        <p><label>Nazwisko autora</label> <input type="text" name="author_lastname"></p>
+        <p><label>Rok publikacji</label> <input type="number" name="publish_year" min="1000" max="<%= new Date().getFullYear() %>" step="1"></p>
+        <p><label>Opis</label> <input type="text" name="about"></p>
+        <p><input class="button" type="submit" value="Utwórz"></p>
+    </form>
+</div>
+
+<%- include ../layouts/footer.ejs %>

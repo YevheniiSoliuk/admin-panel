@@ -1,0 +1,52 @@
+<%- include ../layouts/header.ejs %>
+
+<div>
+    <% if(isAdmin) { %>
+        <div class="btn-continer add-btn">
+            <button class="button" onclick="addBook()">Dodaj</button>
+        </div>
+    <% } %>
+
+    <div class="data-table">
+        <table>
+            <tr>
+                <th>Nr</th>
+                <th>Tytuł</th>
+                <th>Autor</th>
+                <th>Rok publikacji</th>
+                <th>Opis</th>
+                <% if(isAdmin) { %>
+                <th>Akcja</th>
+                <% } %>
+            </tr>
+            <% if(data.length) {
+                for(var i = 0; i< data.length; i++) {
+                    %>
+                    <tr>
+                        <td><%= data[i].id %></td>
+                        <td><%= data[i].title %></td>
+                        <td><%= data[i].author_name %> <%= data[i].author_lastname %></td>
+                        <td><%= data[i].first_publish_year %></td>
+                        <td><%= data[i].about %></td>
+                        <% if(isAdmin) { %>
+                            <td>
+                                <a class="edit" href="../books/edit/<%= data[i].id %>">Edycja</a>
+                                <a class="delete" href="../books/delete/<%= data[i].id %>">Usuń</a>
+                            </td>
+                            <% } %>
+                    </tr>
+            <%
+                }
+            } else {
+                %>
+                <tr>
+                    <td colspan="6">Brak ksiązek</td>
+                </tr>
+                <%
+            }
+            %>
+        </table>
+    </div>
+</div>
+
+<%- include ../layouts/footer.ejs %>

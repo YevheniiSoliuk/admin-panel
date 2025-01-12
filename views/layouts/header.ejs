@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/layout.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="content">
+        <div class="menu">
+            <h2>Panel administracyjny</h2>
+            <div class="flex-container">
+                <% if (login) { %>
+                    <% if (isAdmin) { %>
+                        <button class="nav-button" onclick="users()">Użytkownicy</button>
+                        <button class="nav-button" onclick="books()">Książki</button>
+                    <% } %>
+            </div>
+            <div class="flex-container">
+                    <p>Zalogowano: <span><%= login %></span></p>
+                    <button class="nav-button logout-btn" onclick="logout()">Wyloguj</button>
+                <% } %>
+            </div>
+        </div>
+        <div class="subcontent <% if (!login) { %> subcontent_center <% } %>">
+            <h3 class="page-header"><%= title %></h3>

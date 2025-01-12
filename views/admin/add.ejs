@@ -1,0 +1,16 @@
+<%- include ../layouts/header.ejs %>
+<div>
+    <p><%= message %></p>
+
+    <form method="POST">
+        <p><label>Imię</label> <input type="text" name="name"></p>
+        <p><label>Nazwisko</label> <input type="text" name="lastname"></p>
+        <p><label>Login</label> <input type="text" name="login"></p>
+        <p><label>Hasło</label> <input type="password" name="password"></p>
+        <p><label>Email</label> <input type="text" name="email"></p>
+        <p><label>isAdmin</label> <input type="number" min="0" max="1" name="isAdmin"></p>
+        <p><input class="button" type="submit" value="Utwórz"></p>
+    </form>
+</div>
+
+<%- include ../layouts/footer.ejs %>
