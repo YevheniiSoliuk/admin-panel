@@ -13,20 +13,20 @@ Natomiast użytkownik może wyłącznie preglądać dostępne książki.
  - **controllers** - zawiera funkcję do wystawionych endpointów.
  - **db** - zawiera kod podłączenia sie do bazy oraz je zainicjowanie danymi początkowymi.
  - **helpers** - zawiera funkcje pomocnicze.
- - **middlewares** - zawiera funkcje pośrednie do sprawdzenia roli i sesji uzytkownika.
+ - **middlewares** - zawiera funkcje pośrednie do sprawdzenia roli i sesji użytkownika.
  - **public** - zawiera style, assety i kod uruchamiany dynamicznie po stronie klienta.
  - **routes** - zawiera wszystkie udostępnione przez API endpointy.
- - **views** - zawiera widoki do wyświetlania uzytkownikowi.
+ - **views** - zawiera widoki do wyświetlania użytkownikowi.
 
 ```diff
-!Przed uruchomieniem klienta oraz serwera trzeba śćągnąć biblioteki opisane w pliku "package.json" polecenim
+!Przed uruchomieniem niezbędne śćągnięcie bibliotek opisanych w pliku "package.json" poleceniem
 ```
 
 ```
 npm install
 ```
 
-Uruchomienie panelu administratora lokalnie komendą
+Uruchomienie panelu administratora lokalnie możliwe za pomocą komendy
 ```
 npm start
 ```
@@ -36,6 +36,6 @@ Admin:
  - login: **admin**
  - password: **admin1234***
 
-Uzytkownik:
+Użytkownik:
  - login: **usertest1**
  - password: **test1234***
